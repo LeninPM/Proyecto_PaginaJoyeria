@@ -175,9 +175,10 @@ nav {
   padding: 2rem 0;
   overflow: hidden;
 }
+
 .second-section-title{
   text-align: center;
-
+  padding: 20px;
 }
 
 .second-section .container {
