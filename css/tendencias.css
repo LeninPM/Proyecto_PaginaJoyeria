@@ -1,0 +1,95 @@
+/* Sección de piezas destacadas */
+.featured-pieces {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+  }
+  
+  .featured-pieces h2 {
+    font-size: 3.5rem;
+    color: #333;
+    margin-bottom: 30px;
+    font-family: 'Lora', serif;
+  }
+  
+  .pieces-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .featured-pieces h3{
+    font-size: 50px;
+    margin-bottom: 70px;
+    font-family: 'Lora', serif;
+    padding: 80px 50px;
+
+  }
+  
+  .piece {
+    background-color: #021526;
+    border: 1px solid 		#BEBEBE;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .piece:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .piece img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .piece h3 {
+    font-size: 1.5rem;
+    color: #555;
+    margin: 50px 0 20px;
+
+  }
+  
+  .piece p {
+    font-size: 1.3rem;
+    color: #f8f9fa;
+    margin-bottom: 20px;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 1024px) {
+    .piece {
+      width: 45%; /* Cambia a un diseño más compacto en tabletas */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .pieces-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .piece {
+      width: 80%; /* Reduce el ancho en pantallas más pequeñas */
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .featured-pieces h2 {
+      font-size: 2rem; /* Ajusta el tamaño del título */
+    }
+  
+    .piece h3 {
+      font-size: 1.2rem; /* Ajusta el tamaño del nombre */
+    }
+  
+    .piece p {
+      font-size: 1rem; /* Ajusta el tamaño del precio */
+    }
+  }

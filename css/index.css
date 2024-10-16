@@ -10,10 +10,11 @@
 }
 
 body {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Lora', serif;
   line-height: 1.6;
   color: var(--primary-blue);
 }
+
 
 .container {
   width: 90%;
@@ -175,10 +176,9 @@ nav {
   padding: 2rem 0;
   overflow: hidden;
 }
-
 .second-section-title{
   text-align: center;
-  padding: 20px;
+
 }
 
 .second-section .container {
@@ -269,6 +269,12 @@ footer {
 }
 
 @media (max-width: 768px) {
+
+  nav {
+    flex-direction: column;
+    align-items: center; /* Centra todos los elementos dentro del nav */
+  }
+  
   .nav-links {
       display: none;
   }
@@ -297,3 +303,102 @@ footer {
   
     }  
   }
+
+  /*  */
+
+.button-container {
+  position: fixed; /* Fija el contenedor en la pantalla */
+  top: 10px;       /* Ajusta la distancia desde el borde superior */
+  right: 10px;     /* Ajusta la distancia desde el borde derecho */
+  
+  display: flex;
+  background-color: #021526;
+  width: 250px;
+  height: 40px;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+}
+
+.button {
+  outline: 0 !important;
+  border: 0 !important;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+}
+
+.icon {
+  font-size: 20px;
+}
+
+/* Responsivo para pantallas medianas (tablets) */
+@media (max-width: 768px) {
+  .button-container {
+    width: 200px; /* Reduce el ancho del contenedor */
+    height: 35px; /* Reduce la altura */
+  }
+  
+  .button {
+    width: 35px; /* Reduce el tamaño de los botones */
+    height: 35px;
+  }
+  
+  .icon {
+    font-size: 18px; /* Ajusta el tamaño de los íconos */
+  }
+}
+
+/* Responsivo para pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+  .button-container {
+    flex-direction: column; /* Cambia la dirección a vertical */
+    right: 5px;             /* Ajusta el margen derecho */
+    top: 5px;               /* Ajusta el margen superior */
+    width: auto;            /* Elimina la restricción de ancho fijo */
+    height: auto;           /* Elimina la restricción de altura fija */
+  }
+  
+  .button {
+    margin: 5px 0; /* Añade margen entre los botones en disposición vertical */
+    width: 30px;    /* Reduce el tamaño de los botones */
+    height: 30px;
+  }
+  
+  .icon {
+    font-size: 16px; /* Reduce el tamaño de los íconos */
+  }
+}
+/*Responsive cuadros de categoría Inicio*/
+@media (max-width: 600px) {
+  .category-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajusta el tamaño de la grilla en pantallas más pequeñas */
+  }
+  
+  .category-card img {
+    height: auto; /* Imágenes más pequeñas en pantallas reducidas */
+  }
+}
+
+/*Responsive footer para que esté centrado al reducir tamaño*/
+@media (max-width: 768px) {
+  footer {
+      flex-direction: column; /* Cambia a columna en pantallas más pequeñas */
+      text-align: center; /* Asegura que el texto quede centrado */
+  }
+  .social-icons {
+    justify-content: center;
+}
+}
+
