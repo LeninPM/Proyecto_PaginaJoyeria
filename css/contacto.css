@@ -1,10 +1,97 @@
 @import url('https://fonts.googleapis.com/css2?family=Reddit+Sans+Condensed:wght@200..900&display=swap');
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, Helvetica, sans-serif;
-    }
+:root {
+    --primary-gold: #d4af37;
+    --primary-blue: #021526;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+  }
+  
+  body {
+    font-family: 'Lora', serif;
+    line-height: 1.6;
+    color: var(--primary-blue);
+  }
+  
+  a{
+    text-decoration: none;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: var(--primary-blue);
+    color: var(--primary-gold);
+    padding: 1rem 0;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin-left: 1.5rem;
+  }
+  
+  .nav-links a {
+    color: var(--primary-gold);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #fff;
+  }
+  
+  /* Dropdown Styles */
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--primary-blue);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: var(--primary-gold);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #0a2e4a;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 
     body {
         background-color: #e9e9e9;

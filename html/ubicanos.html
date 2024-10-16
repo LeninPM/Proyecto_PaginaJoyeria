@@ -97,7 +97,7 @@
               </ul>
             </div>
             <div class="footer-section">
-              <h3>Connect With Us</h3>
+              <h3>Conecta con Nosotros</h3>
               <div class="social-icons">
                 <a href="https://www.facebook.com/?locale=es_LA" target="_blank" aria-label="Facebook"><i
                     class="fa-brands fa-facebook"></i></a>
@@ -112,41 +112,6 @@
           </div>
         </div>
       </footer>
-    
-      <script>
-        // Carousel functionality
-        const carousel = document.querySelector('.carousel-inner');
-        const items = carousel.querySelectorAll('.carousel-item');
-        let currentIndex = 0;
-    
-        function showNext() {
-          currentIndex = (currentIndex + 1) % items.length;
-          updateCarousel();
-        }
-    
-        function showPrev() {
-          currentIndex = (currentIndex - 1 + items.length) % items.length;
-          updateCarousel();
-        }
-    
-        function updateCarousel() {
-          const offset = -currentIndex * 100;
-          carousel.style.transform = `translateX(${offset}%)`;
-        }
-    
-        document.querySelector('.carousel-control.next').addEventListener('click', (e) => {
-          e.preventDefault();
-          showNext();
-        });
-    
-        document.querySelector('.carousel-control.prev').addEventListener('click', (e) => {
-          e.preventDefault();
-          showPrev();
-        });
-    
-        // Auto-advance carousel
-        setInterval(showNext, 5000);
-      </script>
 </body>
 
 </html>
